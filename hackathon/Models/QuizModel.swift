@@ -16,8 +16,13 @@ struct Answer: Identifiable, Decodable {
         case id
         case answerText = "answer_text"
         case isCorrect = "is_correct"
-
+        
     }
+}
+
+struct QuizInfo: Decodable {
+    let imageUrl: String
+    let quizzCount: Int
 }
 
 struct Quiz: Identifiable, Decodable {

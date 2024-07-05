@@ -7,26 +7,30 @@
 
 import SwiftUI
 
-final class QuizViewModel: ObservableObject {
+class QuizViewModel: ObservableObject {
     @Published var quizNumber: Int?
+    @Published var selectedQuizNumber: Int?
     @Published var quiz: Quiz?
     @Published var selectedQuizzes: [Quiz] = []
     @Published var errorMessage: String?
     @Published var selectedCategory: String = ""
     @Published var selectedSubCategory: String = ""
     @Published var selectedLevel: String = ""
+    @Published var quizImage: String?
     
-    let categories = ["პროგრამირება", "მათემატიკური"]
+    let categories = ["PROGRAMMING", "მათემატიკური", "TBC", "კოლეჯი"]
     var allDropdownsSelected: Bool {
         return !selectedCategory.isEmpty && !selectedSubCategory.isEmpty && !selectedLevel.isEmpty
     }
     
     var subCategories: [String] {
         switch selectedCategory {
-        case "პროგრამირება":
+        case "PROGRAMMING":
             return ["PYTHON", "IOS", "REACT"]
         case "მათემატიკური":
             return ["უმაღლესი მათემატიკა"]
+        case "TBC":
+            return ["ინვესტიციები"]
         default:
             return []
         }
@@ -34,8 +38,10 @@ final class QuizViewModel: ObservableObject {
     
     var levels: [String] {
         switch selectedCategory {
-        case "პროგრამირება", "მათემატიკური":
+        case "PROGRAMMING", "მათემატიკური":
             return ["Intro", "Advance"]
+        case "TBC":
+            return ["აქციები"]
         default:
             return []
         }
@@ -47,7 +53,6 @@ final class QuizViewModel: ObservableObject {
         selectedLevel = ""
     }
     
-    
     func fetchQuizNumber(category: String, subCategory: String, level: String) {
         guard let url = URL(string: "https://kopa.ge/gettest/?cat1=\(category)&cat2=\(subCategory)&cat3=\(level)&quizNumb=") else { return }
         
@@ -57,13 +62,19 @@ final class QuizViewModel: ObservableObject {
                 return
             }
             
-            if let number = Int(String(data: data, encoding: .utf8) ?? "") {
-                DispatchQueue.main.async { [self] in
-                    self.quizNumber = number
-                    print(self.quizNumber ?? "No number")
+            do {
+                let quizResponse = try JSONDecoder().decode([QuizInfo].self, from: data)
+                if let quizInfo = quizResponse.first {
+                    DispatchQueue.main.async {
+                        self.quizNumber = quizInfo.quizzCount
+                        self.quizImage = quizInfo.imageUrl
+                        
+                        print(self.quizNumber ?? "No number")
+                        print(self.quizImage ?? "No image")
+                    }
                 }
-            } else {
-                print("Failed to parse number")
+            } catch {
+                print("Failed to decode JSON:", error.localizedDescription)
             }
         }.resume()
     }

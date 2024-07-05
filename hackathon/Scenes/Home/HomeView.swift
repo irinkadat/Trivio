@@ -7,19 +7,19 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     @EnvironmentObject var viewModel: QuizViewModel
-    @Binding var selectedTab: MainContentView.Tab
+    @Binding var selectedTab: ContentView.Tab
     @State private var showSearchedQuizzes = false
     
     var body: some View {
         NavigationStack {
             VStack(alignment: .center) {
                 HStack() {
-                    Text("Challenger 🚀")
+                    Text("Trivio 🚀")
                         .font(.system(size: 28, weight: .bold))
                     Spacer()
-                    NavigationLink(destination: ProfileView2()) {
+                    NavigationLink(destination: ProfileView()) {
                         Profile(image: "profilePicture")
                             .padding([.top, .trailing], 8)
                     }
@@ -136,7 +136,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(selectedTab: .constant(.home))
+        HomeView(selectedTab: .constant(.home))
             .environmentObject(QuizViewModel())
     }
 }

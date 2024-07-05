@@ -25,7 +25,6 @@ struct QuizSearchView: View {
     }
 }
 
-
 #Preview {
     QuizSearchView()
 }

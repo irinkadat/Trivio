@@ -31,7 +31,6 @@ struct DailyQuizCard: View {
             }
             
             Button(action: {
-                // Action for joining a quiz
             }) {
                 Text("Join a quiz")
                     .font(.callout)

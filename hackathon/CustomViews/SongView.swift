@@ -15,7 +15,7 @@ struct SongView: View {
     // MARK: - Body
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Image("python")
+            Image("PYTHON")
                 .resizable()
                 .frame(width: 60, height: 60)
                 .cornerRadius(18)
@@ -65,7 +65,7 @@ struct NewsView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             HStack {
-                Image("swift")
+                Image("IOS")
                     .resizable()
                     .frame(width: 30, height: 30)
                     .cornerRadius(16)
@@ -85,7 +85,7 @@ struct NewsView: View {
                     .padding(EdgeInsets(top: 14, leading: 0, bottom: 0, trailing: 20))
                 
             }
-            
+
             // MARK: - Text
             Text("განაგრძე Swift-ის შემდეგი დონე")
                 .foregroundColor(.white)

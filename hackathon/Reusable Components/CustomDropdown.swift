@@ -35,17 +35,17 @@ struct CustomDropdown: View {
                         .foregroundColor(.gray)
                 }
                 .padding(.vertical, 14)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, 20)
                 .background(Color.white)
                 .cornerRadius(16)
                 .overlay(
                     RoundedRectangle(cornerRadius: 16)
-                        .stroke(.customPurple.opacity(0.6), lineWidth: 1)
+                        .stroke(Color.purple.opacity(0.6), lineWidth: 1)
                 )
                 .shadow(color: Color.gray.opacity(0.3), radius: 3, x: 0, y: 2)
                 .opacity(isDisabled ? 0.65 : 1.0)
             }
-            .frame(width: 300, height: 50)
+            .frame(width: 340)
             
             if isOpen && !isDisabled {
                 VStack(alignment: .leading, spacing: 0) {
@@ -67,7 +67,7 @@ struct CustomDropdown: View {
                                         .padding(.trailing, 20)
                                 }
                             }
-                            .frame(width: 300, height: 50, alignment: .leading)
+                            .frame(width: 340, height: 50, alignment: .leading)
                             .background(Color.white)
                         }
                     }
@@ -79,6 +79,7 @@ struct CustomDropdown: View {
             Spacer()
                 .frame(height: 8)
         }
+        .padding(.horizontal, 20)
     }
 }
 

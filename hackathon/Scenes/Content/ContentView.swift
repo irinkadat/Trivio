@@ -12,51 +12,48 @@ struct ContentView: View {
     @State private var selectedTab: Tab = .home
     
     enum Tab: String {
-        case home, leaderboard, quiz, profile
+        case home, leaderboard, quiz, cart, profile
     }
     
     var body: some View {
         TabView(selection: $selectedTab) {
             HomeView(selectedTab: $selectedTab)
                 .tabItem {
-                    Image(systemName: "house.fill")
+                    Image(selectedTab == .home ? "home1Fill" : "home1")
                     Text("Home")
                 }
                 .tag(Tab.home)
-                .environmentObject(viewModel)
             
             Leaderboard()
                 .tabItem {
-                    Image(systemName: "star")
-                    Text("Leaderboard")
+                    Image(selectedTab == .leaderboard ? "starFill" : "star")
+                    Text("Board")
                 }
                 .tag(Tab.leaderboard)
-                .environmentObject(viewModel)
             
-            QuizView2(selectedTab: $selectedTab)
+            QuizView(selectedTab: $selectedTab)
                 .tabItem {
-                    Image(systemName: "pencil.and.outline")
+                    Image(selectedTab == .quiz ? "quizFill" : "quiz")
                     Text("Quiz")
                 }
                 .tag(Tab.quiz)
-                .environmentObject(viewModel)
             
             ProductView()
                 .tabItem {
-                    Image(systemName: "cart.fill")
+                    Image(selectedTab == .cart ? "cartFill" : "cart")
                     Text("Shop")
                 }
-                .tag(Tab.profile)
-                .environmentObject(viewModel)
+                .tag(Tab.cart)
             
-            ProfileView2()
+            ProfileView()
                 .tabItem {
-                    Image(systemName: "person.fill")
+                    Image(selectedTab == .profile ? "personFIll" : "person")
                     Text("Profile")
                 }
                 .tag(Tab.profile)
-                .environmentObject(viewModel)
         }
+        .environmentObject(viewModel)
+        
     }
 }
 

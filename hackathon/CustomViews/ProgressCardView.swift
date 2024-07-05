@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ProgressCardView: View {
-    
     var completedTasks: Int
     var incompleteTasks: Int
     
