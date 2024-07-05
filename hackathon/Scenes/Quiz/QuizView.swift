@@ -64,12 +64,12 @@ struct QuizView: View {
                     }
                     
                     Text(quiz.testText)
-                        .font(.system(size: 18))
+                        .font(.system(size: 14))
                         .padding()
                         .background(
                             RoundedRectangle(cornerRadius: 16)
                                 .stroke(.customPurple, lineWidth: 2)
-                                .background(Color.white)
+                                .background(Color.customPurple)
                         )
                         .padding(.horizontal)
                     

@@ -71,7 +71,7 @@ struct ProductRowView: View {
                     .foregroundColor(.white)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 8)
-                    .background(currentCoins >= product.price ? Color.green : Color.gray)
+                    .background(currentCoins >= product.price ? Color.green.opacity(0.7) : Color.gray)
                     .cornerRadius(16)
             }
         }
