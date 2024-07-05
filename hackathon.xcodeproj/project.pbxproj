@@ -95,8 +95,7 @@
 		8CF212162C35DBC5009AA5EB /* hackathon */ = {
 			isa = PBXGroup;
 			children = (
-				8CF2121B2C35DBC6009AA5EB /* Assets.xcassets */,
-				8CF212482C37B3AF009AA5EB /* Resources */,
+				8CF212642C389BF8009AA5EB /* Resources */,
 				8CF2124C2C37B441009AA5EB /* Scenes */,
 				8CF212472C37B3A6009AA5EB /* App */,
 				8CF212442C37A8DE009AA5EB /* Reusable Components */,
@@ -164,13 +163,6 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		8CF212482C37B3AF009AA5EB /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		8CF212492C37B3D9009AA5EB /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +219,14 @@
 				8CF212592C385FD4009AA5EB /* ProductRowView.swift */,
 			);
 			path = Products;
+			sourceTree = "<group>";
+		};
+		8CF212642C389BF8009AA5EB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8CF2121B2C35DBC6009AA5EB /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
