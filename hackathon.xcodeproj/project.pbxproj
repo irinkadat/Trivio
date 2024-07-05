@@ -13,14 +13,14 @@
 		8CF2121F2C35DBC6009AA5EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CF2121E2C35DBC6009AA5EB /* Preview Assets.xcassets */; };
 		8CF212282C35E65F009AA5EB /* CustomDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF212272C35E65F009AA5EB /* CustomDropdown.swift */; };
 		8CF2122A2C35FC9E009AA5EB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF212292C35FC9E009AA5EB /* HomeView.swift */; };
-		8CF2122E2C368495009AA5EB /* ProfileVie2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF2122D2C368495009AA5EB /* ProfileVie2.swift */; };
+		8CF2122E2C368495009AA5EB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF2122D2C368495009AA5EB /* ProfileView.swift */; };
 		8CF212302C36BCEB009AA5EB /* DailyQuizCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF2122F2C36BCEB009AA5EB /* DailyQuizCard.swift */; };
 		8CF212322C36BE0D009AA5EB /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF212312C36BE0D009AA5EB /* QuizView.swift */; };
 		8CF212352C370A02009AA5EB /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF212342C370A02009AA5EB /* QuizModel.swift */; };
 		8CF212372C370A5B009AA5EB /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF212362C370A5B009AA5EB /* QuizViewModel.swift */; };
 		8CF2123A2C3741CC009AA5EB /* QuizCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF212392C3741CC009AA5EB /* QuizCardView.swift */; };
 		8CF2123D2C374D6B009AA5EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF2123C2C374D6B009AA5EB /* ContentView.swift */; };
-		8CF2123F2C3757A0009AA5EB /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF2123E2C3757A0009AA5EB /* SongView.swift */; };
+		8CF2123F2C3757A0009AA5EB /* CardViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF2123E2C3757A0009AA5EB /* CardViews.swift */; };
 		8CF212412C3757E8009AA5EB /* ProgressCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF212402C3757E8009AA5EB /* ProgressCardView.swift */; };
 		8CF212432C375830009AA5EB /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF212422C375830009AA5EB /* Profile.swift */; };
 		8CF212462C37A8FA009AA5EB /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF212452C37A8FA009AA5EB /* CustomButton.swift */; };
@@ -31,6 +31,8 @@
 		8CF2125A2C385FD4009AA5EB /* ProductRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF212592C385FD4009AA5EB /* ProductRowView.swift */; };
 		8CF2125C2C3861F7009AA5EB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF2125B2C3861F7009AA5EB /* User.swift */; };
 		8CF2125E2C38659F009AA5EB /* UserRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF2125D2C38659F009AA5EB /* UserRowView.swift */; };
+		8CF212602C38924F009AA5EB /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF2125F2C38924F009AA5EB /* AnswerButton.swift */; };
+		8CF212622C38934E009AA5EB /* ProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF212612C38934E009AA5EB /* ProgressViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,14 +43,14 @@
 		8CF2121E2C35DBC6009AA5EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8CF212272C35E65F009AA5EB /* CustomDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropdown.swift; sourceTree = "<group>"; };
 		8CF212292C35FC9E009AA5EB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		8CF2122D2C368495009AA5EB /* ProfileVie2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVie2.swift; sourceTree = "<group>"; };
+		8CF2122D2C368495009AA5EB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		8CF2122F2C36BCEB009AA5EB /* DailyQuizCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuizCard.swift; sourceTree = "<group>"; };
 		8CF212312C36BE0D009AA5EB /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		8CF212342C370A02009AA5EB /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
 		8CF212362C370A5B009AA5EB /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		8CF212392C3741CC009AA5EB /* QuizCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCardView.swift; sourceTree = "<group>"; };
 		8CF2123C2C374D6B009AA5EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		8CF2123E2C3757A0009AA5EB /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
+		8CF2123E2C3757A0009AA5EB /* CardViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViews.swift; sourceTree = "<group>"; };
 		8CF212402C3757E8009AA5EB /* ProgressCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCardView.swift; sourceTree = "<group>"; };
 		8CF212422C375830009AA5EB /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		8CF212452C37A8FA009AA5EB /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -59,6 +61,8 @@
 		8CF212592C385FD4009AA5EB /* ProductRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRowView.swift; sourceTree = "<group>"; };
 		8CF2125B2C3861F7009AA5EB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8CF2125D2C38659F009AA5EB /* UserRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRowView.swift; sourceTree = "<group>"; };
+		8CF2125F2C38924F009AA5EB /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
+		8CF212612C38934E009AA5EB /* ProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,10 +129,11 @@
 			isa = PBXGroup;
 			children = (
 				8CF2122F2C36BCEB009AA5EB /* DailyQuizCard.swift */,
-				8CF2123E2C3757A0009AA5EB /* SongView.swift */,
+				8CF2123E2C3757A0009AA5EB /* CardViews.swift */,
 				8CF212402C3757E8009AA5EB /* ProgressCardView.swift */,
 				8CF212422C375830009AA5EB /* Profile.swift */,
 				8CF212392C3741CC009AA5EB /* QuizCardView.swift */,
+				8CF212612C38934E009AA5EB /* ProgressViewModel.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			children = (
 				8CF212452C37A8FA009AA5EB /* CustomButton.swift */,
 				8CF212272C35E65F009AA5EB /* CustomDropdown.swift */,
+				8CF2125F2C38924F009AA5EB /* AnswerButton.swift */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
@@ -178,7 +184,7 @@
 		8CF2124A2C37B3F8009AA5EB /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				8CF2122D2C368495009AA5EB /* ProfileVie2.swift */,
+				8CF2122D2C368495009AA5EB /* ProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -296,7 +302,8 @@
 				8CF2123A2C3741CC009AA5EB /* QuizCardView.swift in Sources */,
 				8CF212502C37DE30009AA5EB /* LeaderBoard.swift in Sources */,
 				8CF212432C375830009AA5EB /* Profile.swift in Sources */,
-				8CF2123F2C3757A0009AA5EB /* SongView.swift in Sources */,
+				8CF212622C38934E009AA5EB /* ProgressViewModel.swift in Sources */,
+				8CF2123F2C3757A0009AA5EB /* CardViews.swift in Sources */,
 				8CF212322C36BE0D009AA5EB /* QuizView.swift in Sources */,
 				8CF212542C382B4D009AA5EB /* ProductView.swift in Sources */,
 				8CF212462C37A8FA009AA5EB /* CustomButton.swift in Sources */,
@@ -308,9 +315,10 @@
 				8CF212302C36BCEB009AA5EB /* DailyQuizCard.swift in Sources */,
 				8CF212182C35DBC5009AA5EB /* hackathonApp.swift in Sources */,
 				8CF2125C2C3861F7009AA5EB /* User.swift in Sources */,
-				8CF2122E2C368495009AA5EB /* ProfileVie2.swift in Sources */,
+				8CF2122E2C368495009AA5EB /* ProfileView.swift in Sources */,
 				8CF212562C3831B2009AA5EB /* ProductViewModel.swift in Sources */,
 				8CF2125A2C385FD4009AA5EB /* ProductRowView.swift in Sources */,
+				8CF212602C38924F009AA5EB /* AnswerButton.swift in Sources */,
 				8CF212412C3757E8009AA5EB /* ProgressCardView.swift in Sources */,
 				8CF212282C35E65F009AA5EB /* CustomDropdown.swift in Sources */,
 				8CF212582C3849B1009AA5EB /* Product.swift in Sources */,

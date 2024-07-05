@@ -8,27 +8,26 @@
 import SwiftUI
 
 struct ProgressCardView: View {
-    var completedTasks: Int
-    var incompleteTasks: Int
+    @ObservedObject var viewModel = ProgressViewModel(completedTasks: 17, incompleteTasks: 23)
     
     var body: some View {
         
-        let percentage = completedTasks * 100 / (completedTasks + incompleteTasks)
+        let percentage = viewModel.percentage
         VStack(alignment: .leading, spacing: 10) {
             Text("Daily Tasks")
                 .font(.system(size: 18, weight: .medium))
             
-            Text("\(completedTasks)/\(completedTasks + incompleteTasks)")
+            Text(viewModel.formattedTaskProgress)
                 .font(.system(size: 16, weight: .regular))
             
             VStack {
                 HStack(alignment: .bottom) {
                     
-                    Text("Keep  working")
+                    Text("Keep working")
                         .font(.system(size: 14, weight: .light))
                     Spacer()
                     
-                    Text("\(percentage)%")
+                    Text(viewModel.formattedPercentage)
                         .font(.system(size: 16, weight: .regular))
                 }
                 

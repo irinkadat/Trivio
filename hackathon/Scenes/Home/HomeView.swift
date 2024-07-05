@@ -13,23 +13,32 @@ struct HomeView: View {
     @State private var showSearchedQuizzes = false
     
     var body: some View {
-        NavigationStack {
-            VStack(alignment: .center) {
-                HStack() {
-                    Text("Trivio 🚀")
-                        .font(.system(size: 28, weight: .bold))
-                    Spacer()
-                    NavigationLink(destination: ProfileView()) {
-                        Profile(image: "profilePicture")
-                            .padding([.top, .trailing], 8)
-                    }
-                }
-                .padding(.horizontal, 20)
+        VStack(alignment: .center) {
+            HStack() {
+                Text("Trivio 🚀")
+                    .font(.system(size: 28, weight: .bold))
+                Spacer()
                 
-                ScrollView {
-                    if let quizNumber = viewModel.quizNumber {
-                        if quizNumber > 0 {
-                            VStack {                            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
+                Profile(image: "profilePicture")
+                    .padding([.top, .trailing], 8)
+                    .onTapGesture {
+                        selectedTab = .profile
+                    }
+                
+            }
+            .padding(.horizontal, 20)
+            
+            ScrollView {
+                if let quizNumber = viewModel.quizNumber {
+                    if quizNumber > 0 {
+                        VStack {
+                            LazyVGrid(
+                                columns: [
+                                    GridItem(.flexible(), spacing: -2),
+                                    GridItem(.flexible(), spacing: -2)
+                                ],
+                                spacing: 12
+                            ) {
                                 ForEach(viewModel.getQuizNumsArray(count: quizNumber), id: \.self) { number in
                                     Button(action: {
                                         viewModel.selectedQuizNumber = number
@@ -39,23 +48,21 @@ struct HomeView: View {
                                             .padding(.horizontal, 5)
                                     }
                                 }
-                                
                             }
                             .padding(.horizontal, 10)
-                                CustomButton(text: "Go Back", imageName: nil) {
-                                    viewModel.resetSelections()
-                                    viewModel.quizNumber = nil
-                                }
-                                .padding(.top, 20)
+                            CustomButton(text: "Go Back", imageName: nil) {
+                                viewModel.resetSelections()
+                                viewModel.quizNumber = nil
                             }
-                            .padding(.vertical, 20)
-                        } else {
-                            Spacer().frame(height: 250)
-                            showQuizNotFound
+                            .padding(.top, 20)
                         }
+                        .padding(.vertical, 20)
                     } else {
-                        staticHomeContent
+                        Spacer().frame(height: 250)
+                        showQuizNotFound
                     }
+                } else {
+                    staticHomeContent
                 }
             }
         }
@@ -73,7 +80,7 @@ struct HomeView: View {
         }
         
         VStack(alignment: .leading) {
-            ProgressCardView(completedTasks: 14, incompleteTasks: 9)
+            ProgressCardView()
                 .padding(16)
             
             Text("Suggested Tasks")
@@ -94,11 +101,13 @@ struct HomeView: View {
             .padding(.leading, 20)
             
             Spacer().frame(height: 20)
+            
             Text("Daily Quiz 🔥")
                 .font(.system(size: 24, weight: .bold))
                 .padding(.leading, 20)
             
             DailyQuizCard()
+            
         }
     }
     
@@ -128,7 +137,6 @@ struct HomeView: View {
     
     private var searchButton: some View {
         CustomButton(text: "Search", imageName: "magnifyingglass", action: {
-            print("Search button tapped")
             viewModel.fetchQuizNumber(category: viewModel.selectedCategory, subCategory: viewModel.selectedSubCategory, level: viewModel.selectedLevel)
         })
     }

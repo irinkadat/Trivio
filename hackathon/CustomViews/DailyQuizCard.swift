@@ -43,10 +43,10 @@ struct DailyQuizCard: View {
             }
         }
         .padding()
-        .background(LinearGradient(gradient: Gradient(colors: [Color.orange, Color.orange.opacity(0.8)]), startPoint: .topLeading, endPoint: .bottomTrailing))
+        .background(LinearGradient(gradient: Gradient(colors: [Color.orange, Color.orange.opacity(0.6)]), startPoint: .topLeading, endPoint: .bottomTrailing))
         .cornerRadius(25)
         .shadow(color: Color.gray.opacity(0.3), radius: 3, x: 0, y: 2)
-        .padding(.horizontal, 24)
+        .padding(.horizontal, 16)
     }
 }
 

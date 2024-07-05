@@ -68,9 +68,6 @@ class QuizViewModel: ObservableObject {
                     DispatchQueue.main.async {
                         self.quizNumber = quizInfo.quizzCount
                         self.quizImage = quizInfo.imageUrl
-                        
-                        print(self.quizNumber ?? "No number")
-                        print(self.quizImage ?? "No image")
                     }
                 }
             } catch {
@@ -106,7 +103,6 @@ class QuizViewModel: ObservableObject {
                 let quizzes = try JSONDecoder().decode([Quiz].self, from: data)
                 DispatchQueue.main.async {
                     self.selectedQuizzes = quizzes
-                    print(self.selectedQuizzes)
                 }
             } catch {
                 DispatchQueue.main.async {

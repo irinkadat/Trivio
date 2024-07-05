@@ -33,7 +33,6 @@ struct CustomButton: View {
 struct CustomButton_Previews: PreviewProvider {
     static var previews: some View {
         CustomButton(text: "Search", imageName: "magnifyingglass") {
-            print("Button tapped")
         }
     }
 }

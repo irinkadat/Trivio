@@ -10,7 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     var body: some View {
         ZStack {
-            Color(.customPurple.opacity(0.19))
+            Color(.backgroundC)
                 .edgesIgnoringSafeArea(.all)
             VStack(alignment: .leading) {
                 HStack {

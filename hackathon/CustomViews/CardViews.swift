@@ -9,8 +9,6 @@ import Foundation
 import SwiftUI
 
 struct SongView: View {
-    // MARK: - Properties
-    @State private var buttonTapped = false
     
     // MARK: - Body
     var body: some View {
@@ -85,7 +83,7 @@ struct NewsView: View {
                     .padding(EdgeInsets(top: 14, leading: 0, bottom: 0, trailing: 20))
                 
             }
-
+            
             // MARK: - Text
             Text("განაგრძე Swift-ის შემდეგი დონე")
                 .foregroundColor(.white)
