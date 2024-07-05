@@ -43,7 +43,7 @@ struct QuizView: View {
                         }
                     }
                     .padding(.horizontal)
-                    .padding(.top, 20)
+                    .padding(.top, 10)
                     
                     if showExplanation {
                         VStack {
@@ -56,11 +56,9 @@ struct QuizView: View {
                         .font(.body)
                         .padding()
                         .font(.system(size: 16))
-                        
                         .background(Color.customPurple2.opacity(0.2))
                         .cornerRadius(16)
                         .padding(.horizontal)
-                        .padding(.bottom, 10)
                     }
                     
                     Text(quiz.testText)
@@ -72,7 +70,7 @@ struct QuizView: View {
                         )
                         .clipShape(RoundedRectangle(cornerRadius: 16))
                         .padding(.horizontal)
-                        .padding(.top, 20)
+                        .padding(.top, 6)
                         .foregroundColor(.white)
                         .bold()
                     
