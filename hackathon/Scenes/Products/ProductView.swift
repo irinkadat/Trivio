@@ -41,6 +41,8 @@ struct ProductView: View {
                             ProductRowView(product: product, currentCoins: viewModel.userCoins) {
                                 if viewModel.userCoins >= product.price {
                                     alertMessage = "You bought \(product.name) successfully!"
+                                    viewModel.buyProduct(product)
+                                    
                                 } else {
                                     alertMessage = "Not enough coins to buy \(product.name)."
                                 }

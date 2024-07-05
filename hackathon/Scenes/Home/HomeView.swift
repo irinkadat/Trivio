@@ -83,11 +83,11 @@ struct HomeView: View {
             ProgressCardView()
                 .padding(16)
             
-            Text("Suggested Tasks")
-                .font(.system(size: 24, weight: .bold))
+            Text("შემოთავაზებები")
+                .font(.system(size: 22, weight: .bold))
                 .padding(.leading, 20)
             
-            Spacer().frame(height: 20)
+            Spacer().frame(height: 14)
             
             HStack(spacing: 13) {
                 
@@ -102,8 +102,8 @@ struct HomeView: View {
             
             Spacer().frame(height: 20)
             
-            Text("Daily Quiz 🔥")
-                .font(.system(size: 24, weight: .bold))
+            Text("დღის დავალება 🔥")
+                .font(.system(size: 22, weight: .bold))
                 .padding(.leading, 20)
             
             DailyQuizCard()

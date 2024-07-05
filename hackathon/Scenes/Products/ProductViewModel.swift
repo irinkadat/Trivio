@@ -14,6 +14,14 @@ class ProductViewModel: ObservableObject {
     @Published var userCoins: Int = 150
     private var cancellable: AnyCancellable?
     
+    func buyProduct(_ product: Product) {
+        guard userCoins >= product.price else {
+            print("Not enough coins")
+            return
+        }
+        userCoins -= product.price
+    }
+    
     func fetchProducts() {
         guard let url = URL(string: "https://kopa.ge/ProductAPIView/") else {
             errorMessage = "Invalid URL"

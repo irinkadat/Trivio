@@ -53,7 +53,7 @@ struct ProductRowView: View {
             
             VStack(alignment: .leading) {
                 Text(product.name)
-                    .font(.title3)
+                    .font(.system(size: 18))
                     .bold()
                     .foregroundColor(.customPurple2)
                 

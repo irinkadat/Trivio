@@ -42,7 +42,7 @@ struct SongView: View {
             Spacer().frame(height: 26)
             
             // MARK: - Song Text
-            Text("more than 40 Questions on Python Pro")
+            Text("40-ზე მეტი კითხვა Python Pro")
                 .foregroundColor(.white)
                 .font(.system(size: 17))
                 .fontWeight(.bold)
