@@ -68,10 +68,12 @@ struct QuizView: View {
                         .padding()
                         .background(
                             RoundedRectangle(cornerRadius: 16)
-                                .stroke(.customPurple, lineWidth: 2)
-                                .background(Color.customPurple)
+                                .fill(Color.customPurple)
                         )
+                        .clipShape(RoundedRectangle(cornerRadius: 16))
                         .padding(.horizontal)
+                        .foregroundColor(.white)
+                        .bold()
                     
                     VStack(spacing: 10) {
                         ForEach(quiz.answers) { answer in

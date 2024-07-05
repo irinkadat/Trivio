@@ -30,9 +30,10 @@ struct ProfileView: View {
                     Text("შესახებ")
                         .font(.system(size: 20))
                         .fontWeight(.semibold)
+                        .foregroundStyle(.customPurple)
                     
                     Group {
-                        Text("Email: MichaelJep@gmail.com")
+                        Text("Email: MichaelJepgmail.com")
                             .font(.system(size: 18))
                             .fontWeight(.medium)
                         
@@ -48,6 +49,8 @@ struct ProfileView: View {
                         Text("მიღწევები")
                             .font(.system(size: 20))
                             .fontWeight(.semibold)
+                            .foregroundStyle(.customPurple)
+
                         HStack {
                             ProfileImageView(imageName: "badge1", size: 50)
                             ProfileImageView(imageName: "badge2", size: 50)
